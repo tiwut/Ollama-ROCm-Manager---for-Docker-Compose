@@ -1,0 +1,18 @@
+services:
+  ollama:
+    image: ollama/ollama:rocm
+    container_name: ollama-rocm
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - /home/tiwut/Documents/Ollama:/root/.ollama # Replace "tiwut" with your username.
+    devices:
+      - /dev/kfd:/dev/kfd
+      - /dev/dri:/dev/dri
+    group_add:
+      - "44" # GID for video
+      - "992" # GID for render
+    environment:
+      - HSA_OVERRIDE_GFX_VERSION=10.3.0
+      - OLLAMA_INTEL_GPU=0
