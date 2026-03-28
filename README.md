@@ -3,7 +3,7 @@
 ## Overview
 This repository provides a simple GUI-based application named "Ollama ROCm Manager" designed to manage the lifecycle of AI models using Docker and Docker Compose. The application allows users to start, stop, download/pull, and unload models from an Ollama container with ROCm support. It also includes features for managing container operations through a user-friendly interface.
 
-<img width="500" height="auto" alt="Screenshot" src="Screenshot.png" />
+<img width="auto" height="auto" alt="Screenshot" src="Screenshot.png" />
 
 ## Features
 - **Model Management:** Download or pull new models into the system.
